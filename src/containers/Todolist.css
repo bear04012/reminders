@@ -1,0 +1,92 @@
+.box {
+  background: white;
+  border: 1px solid silver;
+  border-radius:5px;
+  width: 500px;
+  height:400px;
+  box-shadow: 2px 2px 5px black;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  position: relative;
+
+}
+
+
+
+.App .box .topic {
+  border-radius:5px;
+  width:45%;
+  height:100%;
+  background:#F0F0F0;
+	float:left;
+}
+
+.search {
+  width:80%;
+  height:20px;
+  border-radius:5px;
+  background:#DCDCDC;
+  align-items:center;
+}
+.App .box div:nth-child(2) {
+  border-radius:5px;
+  width: 55%;
+	height:100%;
+	float:left;
+}
+
+.scheduled span {
+  font-size:15px;
+  position:absolute;
+  top:55px;
+  left:20px;
+  cursor:context-menu;
+}
+
+.reminders span {
+  font-size:15px;
+  position:absolute;
+  top:105px;
+  left:20px;
+  cursor:context-menu;
+}
+
+.onMyMac span{
+  font-size:12px;
+  position:absolute;
+  top: 85px;
+  left:10px;
+}
+
+.addList {
+  position:absolute;
+  bottom:10px;
+  left:10px;
+  cursor:pointer;
+}
+
+
+.lists .title {
+  font-size:1.8em;
+  position:absolute;
+  top:10px;
+  left:240px;
+  color:red;
+}
+
+
+.addBtn {
+  font-size:1.2em;
+  position:absolute;
+  top:20px;
+  right:10px;
+  width:35px;
+  height:20px;
+  border-radius:5px;
+  background:white;
+}
+
+

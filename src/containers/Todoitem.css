@@ -1,0 +1,19 @@
+.thread {
+    
+    display:flex;
+}
+.check{
+    position:relative;
+    top:60px;
+}
+.list{
+    position:absolute;
+    font-size:12px;
+    top:60px;
+    left:250px;
+    width:100px;
+}
+
+.date {
+    font-size:12px;
+}

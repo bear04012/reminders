@@ -1,0 +1,10 @@
+.inputBox {
+  position:absolute;
+  top:60px;
+  left:240px;
+}
+
+.addThread {
+  border:1px solid black;
+  border-radius: 5px;
+}
