@@ -65,7 +65,6 @@ class App extends Component {
   
   
   render() {
-    
     const {user,loginError} = this.state;
     
     return (
@@ -73,7 +72,7 @@ class App extends Component {
       <div className="App">
         
         {user &&
-            <Todolist tryLogOut={this.tryLogOut} />
+            <Todolist tryLogOut={this.tryLogOut} user={user} />
         }
         
 
