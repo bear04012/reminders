@@ -1,19 +1,10 @@
 .thread {
-    
+    padding:5px;
     display:flex;
-}
-.check{
-    position:relative;
-    top:60px;
-}
-.list{
-    position:absolute;
-    font-size:12px;
-    top:60px;
-    left:250px;
-    width:100px;
+    flex-direction:row;
 }
 
-.date {
-    font-size:12px;
-}
+.thread input {
+    flex-shrink:0;
+    width:30px;
+} 

@@ -14,10 +14,11 @@ export default class Todoitem extends Component {
     render() {
         const {todoitem}= this.props;
         const {text} = todoitem.data();
+
         
         return(
             <div className ="thread">
-                <input type="checkbox" className="check" />
+                <input type="checkbox" className="check" onClick={() => {this.props.deleteThread(todoitem.id)}}/>
                 <div className = "list"> {text} </div>
             </div>
             

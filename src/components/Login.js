@@ -41,7 +41,7 @@ export default class Login extends Component {
                                 <input type="password" value = {password}
                                     onChange={e => this.setState({password: e.target.value})} />
                                     
-                                <button class="submitBtn"> Login </button>
+                                <button className="submitBtn"> Login </button>
                                 
                                 <div className="error"> {loginError} </div>
                                     
@@ -69,7 +69,7 @@ export default class Login extends Component {
                                 <input type="password" value = {password}
                                     onChange={e => this.setState({password: e.target.value})} />
                                     
-                                <button class="submitBtn"> Sign Up </button>
+                                <button className="submitBtn"> Sign Up </button>
                                 
                                 <div className="error"> {loginError} </div>
                                     

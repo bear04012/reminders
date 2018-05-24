@@ -1,92 +1,82 @@
-.box {
-  background: white;
-  border: 1px solid silver;
-  border-radius:5px;
-  width: 500px;
-  height:400px;
-  box-shadow: 2px 2px 5px black;
-  
-  display: flex;
-  flex-direction: column;
+.box{
+  background:silver;
+  display:flex;
+  flex-direction:row;
+  height:50vh;
+  width:30vw;
+  border-radius:10px;
+  overflow:hidden;
+}
+
+.box .topic{
+  width:200px;
+  background:#eee;
+  padding:10px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+
+.box .topic .top > *{
+  margin-bottom: 10px;
+}
+
+.box .topic .top .onMyMac {
+  font-family:monospace;
+  font-size:0.9em;
+  margin-left: -5px;
+}
+
+.box .topic .top .search-area {
+  position:relative;
+}
+
+.box .topic .top .search-area span{
+  position:absolute;
+  color:gray;
+  width:100%;
+  height:100%;
+  font-size:0.9em;
+  display:flex;
+  justify-content:center;
   align-items: center;
   
-  position: relative;
+}
+
+.box .topic .search-area input {
+ border: none;
+ border-radius: 3px;
+ background: white;
+ padding: 4px;
+}
+
+.box .lists{
+  
+  background:dodgerblue;
+  flex-grow:1;
+  padding:10px;
+}
+
+.box .lists .top{
+  display:flex;
+  justify-content:space-between;
 
 }
 
-
-
-.App .box .topic {
-  border-radius:5px;
-  width:45%;
-  height:100%;
-  background:#F0F0F0;
-	float:left;
-}
-
-.search {
-  width:80%;
-  height:20px;
-  border-radius:5px;
-  background:#DCDCDC;
-  align-items:center;
-}
-.App .box div:nth-child(2) {
-  border-radius:5px;
-  width: 55%;
-	height:100%;
-	float:left;
-}
-
-.scheduled span {
-  font-size:15px;
-  position:absolute;
-  top:55px;
-  left:20px;
-  cursor:context-menu;
-}
-
-.reminders span {
-  font-size:15px;
-  position:absolute;
-  top:105px;
-  left:20px;
-  cursor:context-menu;
-}
-
-.onMyMac span{
-  font-size:12px;
-  position:absolute;
-  top: 85px;
-  left:10px;
-}
-
-.addList {
-  position:absolute;
-  bottom:10px;
-  left:10px;
-  cursor:pointer;
-}
-
-
-.lists .title {
+.title{
   font-size:1.8em;
-  position:absolute;
-  top:10px;
-  left:240px;
   color:red;
 }
 
-
-.addBtn {
-  font-size:1.2em;
-  position:absolute;
-  top:20px;
-  right:10px;
-  width:35px;
-  height:20px;
-  border-radius:5px;
-  background:white;
+.addList{
+  cursor:pointer;
 }
 
-
+.addBtn {
+  cursor:pointer;
+  width:40px;
+  height:30px;
+  border-radius:5px;
+  border:none;
+  background:white;
+}

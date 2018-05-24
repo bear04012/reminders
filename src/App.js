@@ -72,15 +72,14 @@ class App extends Component {
       
       <div className="App">
         
-        {user ?
-          <div>
-            <Todolist />
-            <button onClick={this.tryLogOut}>Sign Out </button>
-          </div>:
-          
-          <div>
-            <Login tryLogin={this.tryLogin} loginError={loginError} trySignUp={this.trySignUp}/>
-          </div>
+        {user &&
+            <Todolist tryLogOut={this.tryLogOut} />
+        }
+        
+
+        {!user &&
+        
+          <Login tryLogin={this.tryLogin} loginError={loginError} trySignUp={this.trySignUp}/>
           
         }
         
@@ -90,3 +89,4 @@ class App extends Component {
 }
 
 export default App;
+
