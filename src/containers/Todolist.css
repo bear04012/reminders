@@ -4,6 +4,7 @@
   flex-direction:row;
   height:50vh;
   min-width:30vw;
+  width: 60%;
   border-radius:10px;
   overflow:hidden;
 }
@@ -36,15 +37,17 @@
 }
 .box .topic .top .search::placeholder {
   font-family: 'Font Awesome 5 Free';
-  color: blue;
+  color: var(--blue);
   font-weight: 400;
 }
 
 .box .lists{
-  
-  background:dodgerblue;
+  background:var(--blue);
   flex-grow:1;
   padding:10px;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .box .lists .top{
@@ -55,7 +58,7 @@
 
 .title{
   font-size:1.8em;
-  color:red;
+  color:var(--yellow);
 }
 
 .addList{
