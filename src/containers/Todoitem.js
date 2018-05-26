@@ -8,7 +8,6 @@ export default class Todoitem extends Component {
         this.state = {
             
         }
-        
     }
     
     render() {

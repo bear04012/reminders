@@ -8,7 +8,7 @@ const InputBox = (props) => {
     return(
         <form className="inputBox" onSubmit={event => {
             event.preventDefault();
-            props.addThread(textInput.value)
+            props.addItem(textInput.value)
             textInput.value="";
             
         }}>
