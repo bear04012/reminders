@@ -8,7 +8,7 @@ export default class Todolist extends Component {
   constructor(props){
     super(props)
 
-    this.items = {};
+    this.items = {};    // cache
     
     this.state={
       addList:true,
@@ -25,6 +25,7 @@ export default class Todolist extends Component {
     this.getLists();
 
     this.addItem = this.addItem.bind(this);
+    this.removeItem = this.removeItem.bind(this);
   }
 
   getLists() {
@@ -48,7 +49,7 @@ export default class Todolist extends Component {
       })
   }
   
-  addListItem() {
+  addList() {
     let newLists = [...this.state.lists, this.state.newListName];
     
     db.collection('lists').doc(this.props.user.uid).update({
@@ -80,6 +81,8 @@ export default class Todolist extends Component {
             this.items[list] = newItems;
         })
 
+        console.log(this.items)
+
   }
 
   addItem(itemText) {
@@ -100,6 +103,19 @@ export default class Todolist extends Component {
         this.setState({items: newItems});
         this.items[this.state.selectedList] = newItems;
     });
+  }
+
+  removeItem(id) {
+    // cache
+    this.items[this.state.selectedList] = this.items[this.state.selectedList].filter(item => item.id !== id);
+
+    // state
+    this.setState({
+        items: this.items[this.state.selectedList]
+    });
+    
+    // db
+    db.collection('items').doc(id).delete();
   }
   
   
@@ -140,7 +156,7 @@ export default class Todolist extends Component {
                   this.state.showAddListForm &&
                     <form onSubmit={ev => {
                         ev.preventDefault();
-                        this.addListItem();
+                        this.addList();
                         this.setState({
                             newListName: '',
                             showAddListForm: false
@@ -176,12 +192,15 @@ export default class Todolist extends Component {
             <div className ="bottom">
               <div className="lists">
                 {items.map(item => (
-                  <Todoitem key={item.id} todoitem={item} deleteThread={this.deleteThread} />
+                  <Todoitem key={item.id} todoitem={item} removeItem={this.removeItem} />
                 ))
                 }
               </div>
               
             </div>
+            <div style={{
+                flexGrow: 1
+            }}></div>
             <button onClick={tryLogOut}>Sign Out </button>
           </div>
           
